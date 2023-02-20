@@ -1,7 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import { increment } from './actions/counterActions';
+import { decrement } from './actions/counterActions';
 import { useDispatch } from 'react-redux';
 
 import ViewCounter from './components/ViewCounter';
@@ -13,6 +12,7 @@ function App() {
     <div className="App">
       <button onClick={ () => dispatch(increment(1)) }>Öka med 1</button>
       <ViewCounter />
+      <button onClick={ () => dispatch(decrement(1)) }>Minska med 1</button>
     </div>
   )
 }
